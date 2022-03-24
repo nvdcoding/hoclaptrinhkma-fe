@@ -392,7 +392,7 @@ function Security() {
         <p>
           8.1 Nếu bạn có bất kỳ thắc mắc hoặc khiếu nại nào về các phương pháp
           bảo vệ quyền riêng tư của chúng tôi vui lòng liên hệ với chúng tôi tại{" "}
-          <a href="http://localhost:3000/call"> ĐÂY</a>
+          <Link to="/call"> ĐÂY</Link>
         </p>
         <p>
           <b>Bản Cập Nhật ngày 11/11/2021.</b>

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Line } from "@ant-design/plots";
+import React, { useState, useEffect } from "react";
+import { Column } from '@ant-design/plots';
+import { sendGet } from "../../../utils/api";
 import "./Chart.scss";
 const Data = [
   {
@@ -204,43 +205,44 @@ const Data = [
   },
 ];
 const Chart = () => {
-  const [data] = useState(Data);
-  //   useEffect(() => {
-  //     asyncFetch();
-  //   }, []);
-
-  //   const asyncFetch = () => {
-  //     fetch(
-  //       "https://gw.alipayobjects.com/os/bmw-prod/e00d52f4-2fa6-47ee-a0d7-105dd95bde20.json"
-  //     )
-  //       .then((response) => response.json())
-  //       .then((json) => setData(json))
-  //       .catch((error) => {
-  //         console.log("fetch data failed", error);
-  //       });
-  //   };
+  const [data, setData] = useState([]);
+  async function getTopCourses() {
+    const res = await sendGet(`/api/statistic/course`);
+    setData(res.data);
+  }
+  useEffect(() => {
+    getTopCourses();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const config = {
     data,
-    xField: "time",
-    yField: "gdp",
-    seriesField: "name",
-    yAxis: {
-      label: {
-        formatter: (v) => `${(v / 1).toFixed(1)}`,
+    xField: 'name',
+    yField: 'count',
+    label: {
+      // 可手动配置 label 数据标签位置
+      position: 'middle',
+      // 'top', 'bottom', 'middle',
+      // 配置样式
+      style: {
+        fill: '#FFFFFF',
+        opacity: 0.6,
       },
     },
-    legend: {
-      position: "top",
+    xAxis: {
+      label: {
+        autoHide: true,
+        autoRotate: false,
+      },
     },
-    smooth: true,
-    animation: {
-      appear: {
-        animation: "path-in",
-        duration: 5000,
+    meta: {
+      type: {
+        alias: '类别',
+      },
+      sales: {
+        alias: '销售额',
       },
     },
   };
-
-  return <Line {...config} className="line" />;
+  return <Column {...config} className="line" />;
 };
 export default Chart;

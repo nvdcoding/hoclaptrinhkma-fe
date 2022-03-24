@@ -4,15 +4,16 @@ import { sendPost } from "../../../../utils/api/index";
 import { setToken, setRefreshToken, setItem } from "../../../../utils/storage";
 import "../FormSignin/FormSignin.scss";
 export default function FormSignUp() {
+  const [form] = Form.useForm();
   const onFinish = async (values) => {
     const res = await sendPost("/api/auth/sign-up", values);
-    // console.log(res);
     if (res.status === 201) {
       notification.open({
         message: "Đăng kí thành công",
         description: "Bạn vui lòng kiểm tra Email để có thể vào học nhé~~",
         icon: <SmileOutlined style={{ color: "#e52525" }} />,
       });
+      form.resetFields();
     }
     if (res.status === 400) {
       if (values.password < 6) {
@@ -33,6 +34,7 @@ export default function FormSignUp() {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
           autoComplete="off"
+          form={form}
         >
           <Form.Item
             label="Họ tên"

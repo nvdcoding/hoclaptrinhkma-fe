@@ -136,10 +136,14 @@ function Statistics() {
       </Row>
       <Row>
         <Col xs={24} sm={24} md={24} lg={7} xl={7}>
+          <h3 style={{ "text-align": "center", "margin-top": "30px" }}>Top Blogger</h3>
           <TodoWork />
+
         </Col>
         <Col xs={24} sm={24} md={24} lg={17} xl={17}>
+          <h3 style={{ "text-align": "center", "margin-top": "30px" }}>Thống kê số học viên từng khóa học</h3>
           <Chart />
+
         </Col>
       </Row>
     </>

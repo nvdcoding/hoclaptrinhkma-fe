@@ -112,7 +112,7 @@ function BlogItem() {
                     </li>
                     <li>
                       <a
-                        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000/learn/reactjs4"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://learnit-kma.me/learn/reactjs4"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -121,7 +121,7 @@ function BlogItem() {
                     </li>
                     <li>
                       <a
-                        href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to&su=Tiêu đề &body=http://localhost:3000/learn/reactjs4"
+                        href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to&su=Tiêu đề &body=http://learnit-kma.me/learn/reactjs4"
                         target="_blank"
                         rel="noreferrer"
                       >

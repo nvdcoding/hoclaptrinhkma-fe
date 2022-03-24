@@ -15,6 +15,9 @@ export default function ModalAddCourse(props) {
   const showModal = () => {
     setIsModalVisible(true);
   };
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
   const onFinish = async (values) => {
     values.img = imageUrl;
     setIsModalVisible(false);
@@ -72,6 +75,7 @@ export default function ModalAddCourse(props) {
           width={1000}
           title="Thêm khóa học"
           visible={isModalVisible}
+          onCancel={handleCancel}
           maskClosable={true}
           footer={null}
           destroyOnClose={true}
@@ -144,6 +148,17 @@ export default function ModalAddCourse(props) {
                   <Option value="Backend">Back-end</Option>
                   <Option value="FullStack">FullStack</Option>
                   <Option value="Other">Other</Option>
+                </Select>
+              </Form.Item>
+              <Form.Item
+                name="language"
+                label="Ngôn ngữ"
+                rules={[{ required: true, message: "Ngôn ngữ!" }]}
+                hasFeedback
+              >
+                <Select placeholder="Ngôn ngữ khóa học">
+                  <Option value="c">C</Option>
+                  <Option value="nodejs">Javascript</Option>
                 </Select>
               </Form.Item>
             </div>

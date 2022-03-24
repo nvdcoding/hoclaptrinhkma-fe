@@ -38,6 +38,7 @@
   }
 }
 .Xuat-ban {
+  cursor: pointer;
   border: none;
   border-radius: 32px;
   width: 100px;
@@ -84,7 +85,7 @@
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: cover;
-      background-color: #fafafa;
+      background-color: #ecebeb;
       transition: opacity 0.4s ease;
       input {
         position: absolute;

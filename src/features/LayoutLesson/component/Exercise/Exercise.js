@@ -20,7 +20,9 @@ export default function Exercise(props) {
   const [excercise, setExcercise] = useState({});
   const [language, setLanguage] = useState("");
   const [temp, setTemp] = useState("");
+  const [active, setActive] = useState([]);
   const [result, setResult] = useState([]);
+  const [complete, setComplete] = useState(false);
   function handleEditorDidMount(editor, monaco) {
     editorRef.current = editor;
   }
@@ -33,16 +35,18 @@ export default function Exercise(props) {
     }
     if (res.status === 200) {
       setResult(res.data.test.map((e) => e.result));
+      setActive(res.data.test.map((e) => e.status));
+      setComplete(res.data.isComplete);
       if (res.data.isComplete) {
-        message.success("Chúc mừng bạn đã giải đúng");
-        history.goBack();
+        // message.success("Chúc mừng bạn đã giải đúng");
+        setTimeout(()=>history.goBack(), 10000);
+        // ;
       } else {
       }
     }
   }
   async function getExcercise() {
     const res = await sendGet(`/api/excercise/${params.id}`);
-
     if (res.status === 200) {
       setExcercise(res.data);
       const language = await sendGet(`/api/lesson/getOne/${res.data.lesson}`);
@@ -56,12 +60,6 @@ export default function Exercise(props) {
       }
     }
   }
-  // async function getOneExercise() {
-  //   const res = await sendGet(`/api/excercise/${exercise.id}`);
-  //   if (res.status === 200) {
-  //     setCase(res.data);
-  //   }
-  // }
 
   useEffect(() => {
     getExcercise();
@@ -81,9 +79,12 @@ export default function Exercise(props) {
             <i class="fas fa-chevron-left"></i>Quay lại
           </span>
           <div className="button">
-            <button className="btn-run" onClick={showValue}>
+            {complete ? <button className="btn-run" onClick={()=>history.goBack()}>
+              Bài tiếp theo
+            </button> : <button className="btn-run" onClick={showValue}>
               Lưu
-            </button>
+            </button>}
+            
           </div>
           <p>
             Học lập trình để đi làm cùng <span>Learn IT</span>
@@ -100,30 +101,44 @@ export default function Exercise(props) {
           <div className="result">
             <Tabs defaultActiveKey="1">
               <TabPane tab="Test Case" key="1">
-                <Collapse bordered={false}>
+                <Collapse bordered={false} defaultActiveKey={[1,2,3]}>
                   <Panel header="TestCase 1" key="1">
-                    <p>Input: {excercise.cases[0].input}</p>
-                    <p>Expect: {excercise.cases[0].output}</p>
-                    <p>
-                      Output:
+                    <p><strong>Input:</strong> {excercise.cases[0].input}</p>
+                    <p><strong>Expect:</strong> {excercise.cases[0].output}</p>
+                    <p className="output">
+                     <strong>Output:</strong> 
                       {result[0]}
+                      
+                      { active.length === 0 ? null : 
+                        <>{active[0]=== "fail" ?<div style={{backgroundColor: "rgb(202, 52, 52)"}}> <i class="fas fa-times"></i>  </div> :<div style={{backgroundColor: "#49e17cc9"}}> <i class="fas fa-check"></i></div>}</>
+                      }
+                    
                     </p>
                   </Panel>
                   <Panel header="TestCase 2" key="2">
-                    <p>Input: {excercise.cases[1].input}</p>
-                    <p>Expect: {excercise.cases[1].output}</p>
-                    <p>
-                      Output:
+                    <p><strong>Input:</strong> {excercise.cases[1].input}</p>
+                    <p><strong>Expect:</strong> {excercise.cases[1].output}</p>
+                    <p className="output">
+                    <strong>Output:</strong> 
                       {result[1]}
+                      
+                       
+                      { active.length === 0 ? null : 
+                        <>{active[1]=== "fail" ?<div style={{backgroundColor: "rgb(202, 52, 52)"}}> <i class="fas fa-times"></i>  </div> :<div style={{backgroundColor: "#49e17cc9"}}> <i class="fas fa-check"></i></div>}</>
+                      }
                     </p>
                   </Panel>
                   <Panel header="TestCase 3" key="3">
                     {" "}
-                    <p>Input: {excercise.cases[2].input}</p>
-                    <p>Expect: {excercise.cases[2].output}</p>
-                    <p>
-                      Output:
+                    <p><strong>Input:</strong> {excercise.cases[2].input}</p>
+                    <p><strong>Expect:</strong> {excercise.cases[2].output}</p>
+                    <p className="output">
+                    <strong>Output:</strong> 
                       {result[2]}
+                      
+                      { active.length === 0 ? null : 
+                        <>{active[2]=== "fail" ?<div style={{backgroundColor: "rgb(202, 52, 52)"}}> <i class="fas fa-times"></i>  </div> :<div style={{backgroundColor: "#49e17cc9"}}> <i class="fas fa-check"></i></div>}</>
+                      }
                     </p>
                   </Panel>
                 </Collapse>

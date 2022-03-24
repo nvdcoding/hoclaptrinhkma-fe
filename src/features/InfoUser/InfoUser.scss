@@ -147,3 +147,11 @@
     width: 150px;
   }
 }
+@media (min-width: 0px) and (max-width: 739px) {
+  .InfoUser-wwrapper {
+    width: 100%;
+}.InfoUser-wwrapper .info {
+  width: 100%;
+}
+.InfoUser-wwrapper .info p{width: 100%}
+}

@@ -15,9 +15,9 @@ export default function Report() {
       dataIndex: "post",
       key: "post",
       width: "30%",
-      render: (post, link) => (
-        <a href={`http://localhost:3001/blog/${link}`} target="_blank" rel="noreferrer">
-          {post}
+      render: (_, value) => (
+        <a href={`http://learnit-kma.me/blog/${value.link}`} target="_blank" rel="noreferrer">
+          {value.post}
         </a>
       ),
     },

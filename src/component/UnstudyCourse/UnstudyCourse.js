@@ -36,7 +36,7 @@ function UnstudyCourses() {
               />
             </div>
           </Link>
-          <Link to={`/course${item._id}`}>
+          <Link to={`/course/${item._id}`}>
             <h3>{item.name}</h3>
           </Link>
         </div>

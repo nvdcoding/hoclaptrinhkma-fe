@@ -18,7 +18,7 @@ function PostManager() {
       width: "25%",
       render: (_, value) => (
         <a
-          href={`http://localhost:3001/blog/${value._id}`}
+          href={`http://learnit-kma.me/blog/${value._id}`}
           target="_blank"
           rel="noreferrer"
         >

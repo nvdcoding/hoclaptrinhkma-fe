@@ -6,15 +6,15 @@ function DetailBeginer() {
   // const { id } = useParams();
   const Detail = [
     {
-      link: "http://localhost:3000/course/620131ef937ecf1ddbfb2886",
-      img: "https://cdn.fullstack.edu.vn/f8-production/courses/7.png",
+      link: "http://learnit-kma.me/course/6229fcbc6b1c671d838f5c01",
+      img: "https://res.cloudinary.com/learnit2022/image/upload/v1646918830/uur6xovhbdzptpubyrd4.jpg",
       name: "Kiến thức nền tảng",
       sub_name:
         "Để có cái nhìn tổng quan về ngành IT - Lập trình web các bạn nên xem các videos tại khóa này trước nhé.",
     },
     {
-      link: "http://localhost:3000/course/620132a65b69e2bde91c91d5",
-      img: "https://cdn.fullstack.edu.vn/f8-production/courses/2.png",
+      link: "http://learnit-kma.me/course/6229fe5d6b1c671d838f5c09",
+      img: "https://res.cloudinary.com/learnit2022/image/upload/v1646919253/pcmlxhkcapnsq0wdliz5.jpg",
       name: "Front-end",
       sub_name:
         "Lập trình viên Front-end là người xây dựng ra giao diện websites. Trong phần này Learn IT sẽ chia sẻ cho bạn lộ trình để trở thành lập trình viên Front-end nhé.",

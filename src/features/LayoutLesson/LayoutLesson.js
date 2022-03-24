@@ -18,6 +18,7 @@ function LayoutLesson() {
   const [copied, setCopied] = useState(false);
   const [name, setName] = useState("Học lập trình cùng LearIT");
   const [count, setCount] = useState(1);
+  const [active, setActive] = useState(false);
   const [complete, setComplete] = useState([]);
   function copy() {
     const el = document.createElement("input");
@@ -56,7 +57,13 @@ function LayoutLesson() {
         //   message.success("Bài 1");
         // }
         const key = i + 1;
-        history.push(`/learn/${params.link}/${e[key]?._id}`);
+        if(e[key]?.status === true){
+          history.push(`/learn/${params.link}/${e[key]?._id}`);
+        }
+        else{
+          setActive(!active)
+        }
+        
       }
     }
   };
@@ -64,7 +71,7 @@ function LayoutLesson() {
     for (let i = 0; i < e.length; i++) {
       if (e[i]?._id === params.id) {
         const key = i - 1;
-        history.push(`/learn/${params.link}/${e[key]?._id}`);
+          history.push(`/learn/${params.link}/${e[key]?._id}`);
       }
     }
   };
@@ -114,6 +121,7 @@ function LayoutLesson() {
                 className="fas fa-chevron-right"
                 onClick={() => NextLesson(data)}
                 hidden={params.id === data[data.length - 1]?._id ? true : false}
+                style={{"pointer-events": active}}
               ></i>
               <div onClick={handleZoom}>
                 <MenuFoldOutlined />
@@ -132,91 +140,91 @@ function LayoutLesson() {
                             Hoàn thành {count}/{data.length} bài học
                           </p>
                         </div>
-                        <MenuUnfoldOutlined onClick={handleZoom} />
                       </div>
                       <div className="part">
-                        {data?.map((i) => (
-                          <div className="lesson">
-                            {path.pathname ===
-                            `/learn/${params.link}/${i._id}` ? (
-                              <>
-                                <div
-                                  className="lesson-main "
-                                  style={{ backgroundColor: "#FCDCD3" }}
-                                >
-                                  <div className="lesson-name">
-                                    <i class="fas fa-check"></i>
-                                    <p>
-                                      <Link to={i._id}>{i.name}</Link>
-                                    </p>
-                                  </div>
-                                  <div className="lesson-time">
-                                    <i class="fas fa-play-circle"></i>
-                                  </div>
-                                </div>
-                                <div
-                                  className="exercise"
-                                  style={{ "pointer-events": "auto" }}
-                                >
-                                  {i.excercises?.length === 0 ? null : (
-                                    <h3>Bài tập</h3>
-                                  )}
-                                  {i.excercises?.map((index) => (
-                                    <>
-                                      <p>
-                                        <Link to={`/exercise/${index._id}`}>
-                                          {i.excercises?.indexOf(index) + 1}
-                                        </Link>
-                                      </p>
-                                    </>
-                                  ))}
-                                </div>
-                              </>
-                            ) : (
-                              <>
-                                <div
-                                  className="lesson-main"
-                                  style={
-                                    i.status
-                                      ? { "pointer-events": "auto" }
-                                      : {
-                                          "pointer-events": "none",
-                                          backgroundColor: "rgb(178 173 173)",
-                                        }
-                                  }
-                                >
-                                  <div className="lesson-name ">
-                                    <i class="fas fa-check"></i>
-                                    <p>
-                                      <Link to={i._id}>{i.name}</Link>
-                                    </p>
-                                  </div>
-                                  <div className="lesson-time">
-                                    <i class="fas fa-play-circle"></i>
-                                  </div>
-                                </div>
-                                <div
-                                  className="exercise"
-                                  style={{ "pointer-events": "none" }}
-                                >
-                                  {i.excercises?.length === 0 ? null : (
-                                    <h3>Bài tập</h3>
-                                  )}
-                                  {i.excercises?.map((index) => (
-                                    <>
-                                      <p>
-                                        <Link to={`/exercise/${i._id}`}>
-                                          {i.excercises?.indexOf(index) + 1}
-                                        </Link>
-                                      </p>
-                                    </>
-                                  ))}
-                                </div>
-                              </>
-                            )}
-                          </div>
+              {data?.map((i) => (
+                <div className="lesson">
+                  {path.pathname === `/learn/${params.link}/${i._id}` ? (
+                    <>
+                      <div
+                        className="lesson-main "
+                        style={{ backgroundColor: "#FCDCD3" }}
+                      >
+                        <div className="lesson-name">
+                          <i class="fas fa-check"></i>
+                          <Link to={i._id}><p>
+                            {i.name}
+                          </p></Link>
+                        </div>
+                        <div className="lesson-time">
+                          <i class="fas fa-play-circle"></i>
+                        </div>
+                      </div>
+                      <div
+                        className="exercise"
+                        style={{ "pointer-events": "auto" }}
+                      >
+                        {i.excercises?.length === 0 ? null : <h3>Bài tập</h3>}
+                        {i.excercises?.map((index) => (
+                          <>
+                            <p>
+                              <Link to={`/exercise/${index._id}`}>
+                                {complete.includes(index._id) ? (
+                                  <i class="fa fa-check" style={{margin: "0px"}} aria-hidden="true"></i>
+                                ) : (
+                                  i.excercises?.indexOf(index) + 1
+                                )}
+                              </Link>
+                            </p>
+                          </>
                         ))}
                       </div>
+                    </>
+                  ) : (
+                    <>
+                      <div
+                        className="lesson-main"
+                        style={
+                          i.status
+                            ? { "pointer-events": "auto" }
+                            : {
+                              "pointer-events": "none",
+                              backgroundColor: "#f1f1f1",
+                            }
+                        }
+                      >
+                        <div className="lesson-name ">
+                          <i
+                            class={i.status ? "fas fa-check" : "fas fa-lock"}
+                          ></i>
+                         <Link to={i._id}> <p>
+                            {i.name}
+                          </p></Link>
+                        </div>
+                        <div className="lesson-time">
+                          <i class="fas fa-play-circle"></i>
+                        </div>
+                      </div>
+                      <div
+                        className="exercise"
+                        style={{ "pointer-events": "none" }}
+                      >
+                        {i.excercises?.length === 0 ? null : <h3>Bài tập</h3>}
+                        {i.excercises?.map((index) => (
+                          <>
+                            <p>
+                              <Link to={`/exercise/${i._id}`}>
+                                {i.excercises?.indexOf(index) + 1}
+                              </Link>
+                            </p>
+                          </>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
                     </div>
                   </TabPane>
                   <TabPane tab="Tổng quan" key="1">
@@ -252,7 +260,7 @@ function LayoutLesson() {
                           {/* sau ?u là đường link mình muốn share */}
                           <a
                             style={{ backgroundColor: "#4080ff" }}
-                            href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000/learn/reactjs4"
+                            href="https://www.facebook.com/sharer/sharer.php?u=http://learnit-kma.me/learn/reactjs4"
                             target="_blank"
                             rel="noreferrer"
                           >
@@ -261,7 +269,7 @@ function LayoutLesson() {
                           {/* sau su là tiêu đề saubody là đường link chia sẻ */}
                           <a
                             style={{ backgroundColor: "#F47425" }}
-                            href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to&su=Tiêu đề &body=http://localhost:3000/learn/reactjs4"
+                            href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to&su=Tiêu đề &body=http://learnit-kma.me/learn/reactjs4"
                             target="_blank"
                             rel="noreferrer"
                           >
@@ -309,7 +317,7 @@ function LayoutLesson() {
                     <div className="involve">
                       <h4>
                         <a
-                          href="http://localhost:3000/"
+                          href="http://learnit-kma.me/"
                           rel="noreferrer"
                           target="_blank"
                         >
@@ -345,9 +353,9 @@ function LayoutLesson() {
                       >
                         <div className="lesson-name">
                           <i class="fas fa-check"></i>
-                          <p>
-                            <Link to={i._id}>{i.name}</Link>
-                          </p>
+                          <Link to={i._id}><p>
+                            {i.name}
+                          </p></Link>
                         </div>
                         <div className="lesson-time">
                           <i class="fas fa-play-circle"></i>
@@ -363,7 +371,7 @@ function LayoutLesson() {
                             <p>
                               <Link to={`/exercise/${index._id}`}>
                                 {complete.includes(index._id) ? (
-                                  <i class="fa fa-check" aria-hidden="true"></i>
+                                  <i class="fa fa-check" style={{margin: "0px"}} aria-hidden="true"></i>
                                 ) : (
                                   i.excercises?.indexOf(index) + 1
                                 )}
@@ -381,18 +389,18 @@ function LayoutLesson() {
                           i.status
                             ? { "pointer-events": "auto" }
                             : {
-                                "pointer-events": "none",
-                                backgroundColor: "#f1f1f1",
-                              }
+                              "pointer-events": "none",
+                              backgroundColor: "#f1f1f1",
+                            }
                         }
                       >
                         <div className="lesson-name ">
                           <i
                             class={i.status ? "fas fa-check" : "fas fa-lock"}
                           ></i>
-                          <p>
-                            <Link to={i._id}>{i.name}</Link>
-                          </p>
+                         <Link to={i._id}> <p>
+                            {i.name}
+                          </p></Link>
                         </div>
                         <div className="lesson-time">
                           <i class="fas fa-play-circle"></i>

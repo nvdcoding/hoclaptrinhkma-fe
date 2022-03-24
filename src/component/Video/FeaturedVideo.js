@@ -62,7 +62,8 @@ function FeaturedVideo() {
                   <img alt="video" src={item.img} />
                 </div>
               </a>
-              <h3>{item.title}</h3>
+              <a href={item.link} target="_blank" rel="noreferrer">
+              <h3>{item.title}</h3></a>
               <div className="Video-info">
                 <p>
                   <i class="fas fa-eye"></i>

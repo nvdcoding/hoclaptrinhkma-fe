@@ -6,11 +6,11 @@ import "./Carousel.scss";
 
 const carousel = [
   {
-    title: "Học ReactJS Miễn phí!",
+    title: "Học ReactJS miễn phí!",
     description:
       "Khóa học ReactJS từ cơ bản tới nâng cao. Kết quả của khóa học này là bạn có thể làm hầu hết các dự án thường gặp với ReactJS.",
     button: "Học ngay",
-    link: "/course/62013449d1cbcc188f8822fa",
+    link: "/course/6229ff956b1c671d838f5c19",
     image: "https://i.imgur.com/IDdvBYo.png",
     user: "Admin",
     userProfile:
@@ -22,7 +22,7 @@ const carousel = [
       "Xây dựng được ứng dụng web hoàn chỉnh sử dụng các công nghệ HTML5, CSS3, các CSS Framework, bootstrap framework",
     button: "Học ngay",
 
-    link: "/course/620132a65b69e2bde91c91d5",
+    link: "/course/6229fe5d6b1c671d838f5c09",
     image: "https://i.imgur.com/KbWWfOp.png",
     user: "Admin",
     userProfile:
@@ -34,7 +34,7 @@ const carousel = [
       "JavaScript được sử dụng chủ yếu để nâng cao sự tương tác của người dùng với trang web. Nói cách khác, bạn có thể làm trang web của mình trở nên sinh động và tương tác hơn",
     button: "Học ngay",
 
-    link: "/course/620133cc1635993a4d62e20b",
+    link: "/course/6229fee56b1c671d838f5c11",
     image: "https://i.imgur.com/bBAy3t7.png",
     user: "Admin",
     userProfile:

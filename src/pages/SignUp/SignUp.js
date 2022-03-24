@@ -32,7 +32,7 @@ function SignUp() {
             Bạn đã có tài khoản? <Link to="/signin"> Đăng nhập</Link>
           </div>
           <div className="Login-about">
-            <span>Giới thiệu về LI</span>
+            <span><Link to ="/about" style={{color: "#fff"}}> Giới thiệu về LI</Link></span>
             <span>LI trên Facebook</span>
             <span>LI trên Youtube</span>
           </div>

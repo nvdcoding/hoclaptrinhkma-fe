@@ -253,7 +253,8 @@ function HeaderLayout(navClassList) {
                   <div className="content">
                     <img
                       alt="logo"
-                      src="https://fullstack.edu.vn/assets/images/f8_avatar.png"
+                      src={logo}
+
                     />
                     <p>
                       {t(
@@ -265,7 +266,7 @@ function HeaderLayout(navClassList) {
               </Badge>
               <div className="header-user">
                 <img
-                  src={profile?.avatar}
+                  src={profile?.avatar ? profile?.avatar : avt}
                   alt="avt"
                   onError={(e) => {
                     e.target.onerror = null;

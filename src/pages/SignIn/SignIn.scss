@@ -85,3 +85,16 @@
     }
   }
 }
+@media (min-width: 0px) and (max-width: 739px) {
+  .SignIn-wrapper .Modal-SignIn{
+    width: 90%;
+    padding: 10px;
+  }
+  .SignIn-wrapper .Modal-SignIn .Login-about{
+    display: none;
+  }
+  .SignIn-wrapper .Modal-SignIn .Modal-title h3{
+    font-size: 20px;
+     margin: 0px;
+  }
+}

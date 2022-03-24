@@ -31,7 +31,7 @@ function SignIn() {
             Bạn chưa có tài khoản? <Link to="/register"> Đăng ký</Link>
           </div>
           <div className="Login-about">
-            <span>Giới thiệu về LI</span>
+          <span><Link to ="/about"style={{color: "#fff"}}> Giới thiệu về LI</Link></span>
             <span>LI trên Facebook</span>
             <span>LI trên Youtube</span>
           </div>

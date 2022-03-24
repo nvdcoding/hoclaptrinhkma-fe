@@ -16,7 +16,7 @@ function Rules() {
         </ul>
         <li>
           <a
-            href="http://localhost:3000/rules1"
+            href="http://learnit-kma.me/rules1"
             target="_blank"
             rel="noreferrer"
           >
@@ -25,7 +25,7 @@ function Rules() {
         </li>
         <li>
           <a
-            href="http://localhost:3000/security"
+            href="http://learnit-kma.me/security"
             target="_blank"
             rel="noreferrer"
           >
@@ -34,7 +34,7 @@ function Rules() {
         </li>
         <li>
           <a
-            href="http://localhost:3000/rules1"
+            href="http://learnit-kma.me/rules1"
             target="_blank"
             rel="noreferrer"
           >
@@ -43,7 +43,7 @@ function Rules() {
         </li>
         <li>
           <a
-            href="http://localhost:3000/rules1"
+            href="http://learnit-kma.me/rules1"
             target="_blank"
             rel="noreferrer"
           >
@@ -52,7 +52,7 @@ function Rules() {
         </li>
         <li>
           <a
-            href="http://localhost:3000/rules1"
+            href="http://learnit-kma.me/rules1"
             target="_blank"
             rel="noreferrer"
           >

@@ -54,6 +54,10 @@ function InfoCourse() {
       message.success("Bạn đã đăng kí khóa học. Học tiếp thôi!");
       return history.push(`/learn/${params.link}/${infoCourse.lesson[0]}`);
     }
+    if (res.status  === 401) {  
+      message.success("Bạn vui lòng đăng nhập để thực hiện chức năng này");
+      return history.push("/signin");;
+    }
   }
 
   useEffect(() => {
@@ -96,14 +100,15 @@ function InfoCourse() {
                       </ul>
                     </div>
                     <div className="Course-main">
-                      {lesson?.map((i) => (
+                      {lesson?.length === 0 ? <p>Không có bài học</p> : <>{lesson?.map((i) => (
                         <div className="Course-lesson-item">
                           <p>
                             <i class="fas fa-play-circle"></i>
                             {lesson?.indexOf(i) + 1}. {i.name}
                           </p>
                         </div>
-                      ))}
+                      ))}</>}
+                      
                     </div>
                     <h2>Yêu cầu</h2>
                     {requirement1?.map((item) => (

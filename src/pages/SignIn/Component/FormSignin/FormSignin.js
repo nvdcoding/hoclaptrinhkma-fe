@@ -20,13 +20,12 @@ export default function FormSignIn() {
         return history.push("/admin");
       }
     }
-    if (res.status === 401) {
+    if (res.status === 400) {
       message.error("Tài khoản/Mật khẩu không đúng!");
     }
-    if (res.status === 400) {
+    if (res.status === 401) {
       message.error("Tài khoản không tồn tại");
     }
-    // console.log(res);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -63,12 +62,13 @@ export default function FormSignIn() {
             label="Password"
             name="password"
             hasFeedback
-            rules={[
-              {
+            rules={[{
                 validateStatus: "error",
                 required: true,
                 message: "Mật khẩu không được để trống!",
               },
+              { min: 6,required: true, message: 'Mật khẩu tối thiểu 6 kí tự' },
+              
             ]}
           >
             <Input.Password placeholder="Nhập mật khẩu của bạn" />

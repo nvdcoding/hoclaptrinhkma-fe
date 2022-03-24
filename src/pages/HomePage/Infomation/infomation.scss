@@ -240,3 +240,54 @@
     }
   }
 }
+
+@media (min-width: 0px) and (max-width: 739px) {
+  .Info-wrapper .container .content{    padding: 5%;}
+  .Info-wrapper .container .info{    flex-wrap: wrap;}
+  .Info-wrapper .container .info section {
+    width: 100%;
+}
+.Info-wrapper .container .info section video {
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+.Info-wrapper .container .achievement{    margin: 40px 2%}
+.Info-wrapper .container .achievement div {
+  text-align: center;
+  margin: 0 14px;
+}
+.Info-wrapper .container .achievement div p{    font-size: 16px;}
+.Info-wrapper .container .vision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Info-wrapper .container .vision div i {
+  font-size: 43px;
+}
+.Info-wrapper .container .vision div h3 {
+  font-size: 19px;}
+  .Info-wrapper .container .vision div p {
+    
+    line-height: 25px;
+    font-size: 14px;
+}
+.Info-wrapper .container .receive .receive-main h1 {
+  margin: 20px 0;
+  word-spacing: -1px;
+}
+.Info-wrapper .container .receive .receive-main div h3{    font-size: 16px;}
+.Info-wrapper .container .receive .receive-main div p {
+  font-size: 15px;
+  margin-bottom: 13px;
+}
+.Info-wrapper .container .receive{    margin-bottom: 235px;
+}
+
+.Info-wrapper .container .founder img {
+  width: 200px;
+}
+.Info-wrapper .container .founder div h4 {
+  font-size: 13px;}
+}

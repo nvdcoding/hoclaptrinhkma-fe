@@ -91,3 +91,27 @@
     }
   }
 }
+@media (min-width: 740px) and (max-width: 1023px) {
+  .call .call-center .call-heading .call-heading-module p{
+    padding: 0 7%;
+  }
+  .call .call-center .call-module {
+    margin: 0 7%;
+}
+}
+@media (min-width: 0px) and (max-width: 739px) {
+  .call .call-center .call-heading .call-heading-module p{
+    padding: 0 20px;
+  }
+  .call .call-center .call-module {
+    margin: 20px;
+}
+.call .call-center .call-module .call-module-row{    flex-direction: column;}
+.index-col{
+  width: 100%
+}
+.index-col .index-border-col {
+  padding-top: 10px;
+  border-top: 1px solid #999999;
+}
+}

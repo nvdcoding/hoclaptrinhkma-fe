@@ -24,3 +24,12 @@
     text-align: justify;
   }
 }
+@media (min-width: 740px) and (max-width: 1023px) {
+  
+}
+
+@media (min-width: 0px) and (max-width: 739px) {
+  .security-module p , .security-module li{
+    padding: 0 7%;
+}
+}

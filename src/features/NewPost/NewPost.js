@@ -92,7 +92,11 @@ function Blogging() {
     if (add.status === 201) {
       message.success("Bài viết của bạn đang được duyệt");
       history.push("/");
-    } else {
+    }
+   else if (add.status === 400) {
+      message.error("Tiêu đề/Nội dung không được để trống");
+    }
+     else {
       message.error("Lỗi kĩ thuật");
     }
   };

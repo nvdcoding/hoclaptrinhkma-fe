@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Skeleton } from "antd";
 import { createBrowserHistory } from "history";
 import PrivateRoute from "./Router/PrivateRouter";
-// routes
+// routes duy 123123
 import RoutePage from "./Router/Router";
 import { getItem, setItem } from "./utils/storage";
 // others

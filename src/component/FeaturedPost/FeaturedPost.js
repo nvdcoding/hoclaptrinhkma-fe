@@ -48,8 +48,8 @@ function Posts() {
                   />
                 </div>
               </Link>
-
-              <h3>{item.title}</h3>
+              <Link to={`/blog/${item._id}`}>
+              <h3>{item.title}</h3></Link>
               <div className="Author">
                 <img
                   alt="author"

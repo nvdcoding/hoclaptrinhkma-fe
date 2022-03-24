@@ -32,3 +32,10 @@
     list-style-type: square;
   }
 }
+@media (min-width: 740px) and (max-width: 1023px) {
+ 
+.rules-module ul, .rules-module p {
+  padding: 0 7%;}
+  .rules-module .rules1 {
+    padding: 0 11%;}
+}

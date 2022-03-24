@@ -10,8 +10,8 @@ function DetailBackEnd() {
         "Để học web Front-end chúng ta luôn bắt đầu với ngôn ngữ HTML và CSS, đây là 2 ngôn ngữ có mặt trong mọi website trên internet. Trong khóa học này F8 sẽ chia sẻ từ những kiến thức cơ bản nhất. Sau khóa học này bạn sẽ tự làm được 2 giao diện websites là The Band và Shopee.",
       course: [
         {
-          link: "http://localhost:3000/course/620132a65b69e2bde91c91d5",
-          img: "https://files.fullstack.edu.vn/f8-prod/courses/2.png",
+          link: "http://learnit-kma.me/course/6229fe5d6b1c671d838f5c09",
+          img: "https://res.cloudinary.com/learnit2022/image/upload/v1646919253/pcmlxhkcapnsq0wdliz5.jpg",
           name: "HTML, CSS từ Zero đến Hero ",
           sub_name:
             "Trong khóa này chúng ta sẽ cùng nhau xây dựng giao diện 2 trang web là The Band & Shopee.",
@@ -24,16 +24,16 @@ function DetailBackEnd() {
         "Có rất nhiều ngôn ngữ để bạn có thể làm việc với Back-end, tuy nhiên bạn không cần phải học tất cả. Bạn chỉ cần tập trung vào 1 ngôn ngữ là có thể làm việc tốt. Tại đây chúng ta sẽ bắt đầu với ngôn ngữ lập trình Javascript.",
       course: [
         {
-          link: "http://localhost:3000/course/620133cc1635993a4d62e20b",
-          img: "https://files.fullstack.edu.vn/f8-prod/courses/1.png",
+          link: "http://learnit-kma.me/course/6229fee56b1c671d838f5c11",
+          img: "https://res.cloudinary.com/learnit2022/image/upload/v1646919379/igo0c2gveb6qcdgbv5jv.jpg",
           name: "JavaScript Cơ Bản",
           sub_name:
             "Học Javascript cơ bản phù hợp cho người chưa từng học lập trình. Với hơn 100 bài học và có bài tập thực hành sau mỗi bài học.            ",
         },
         {
-          link: "http://localhost:3000/course/62013417d1cbcc188f8822f5",
-          img: "https://files.fullstack.edu.vn/f8-prod/courses/12.png",
-          name: "JavaScript nag cao",
+          link: "http://learnit-kma.me/course/6229ff616b1c671d838f5c15",
+          img: "https://res.cloudinary.com/learnit2022/image/upload/v1646919518/jwzmmktj6lexczunipuu.jpg",
+          name: "JavaScript nâng cao",
           sub_name:
             "Hiểu sâu hơn về cách Javascript hoạt động, tìm hiểu về IIFE, closure, reference types, this keyword, bind, call, apply, prototype, ...",
         },
@@ -45,8 +45,8 @@ function DetailBackEnd() {
         "Một ứng dụng Back-end hiện đại có thể rất phức tạp, việc sử dụng code thuần (tự tay code từ đầu) không phải là một lựa chọn tốt. Vì vậy các Libraries và Frameworks ra đời nhằm đơn giản hóa, tiết kiệm thời gian và tiền bạc để nhanh chóng tạo ra được sản phẩm cuối cùng.",
       course: [
         {
-          link: "http://localhost:3000/course/62013534d97e409a3cbe6d16",
-          img: "https://files.fullstack.edu.vn/f8-prod/courses/6.png",
+          link: "http://learnit-kma.me/course/6229ffcd6b1c671d838f5c1d",
+          img: "https://res.cloudinary.com/learnit2022/image/upload/v1646919610/acdbqq2atunj8tgu2dpf.jpg",
           name: "Node & ExpressJS",
           sub_name:
             "Học Back-end với Node & ExpressJS framework, hiểu các khái niệm khi làm Back-end và xây dựng RESTful API cho trang web.",

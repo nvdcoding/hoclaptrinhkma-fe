@@ -38,12 +38,13 @@ axiosInstance.interceptors.response.use(
     }
 
     if (error?.response?.status === 401) {
-      const refreshToken = getRefreshToken();
-      if (!refreshToken) {
-        logout();
+      // const refreshToken = getRefreshToken();
+      // if (!refreshToken) {
+      //   alert("errr");
+      //   logout();
 
-        return Promise.reject(error);
-      }
+      //   return Promise.reject(error);
+      // }
       return Axios.post(
         `http://103.75.186.104:3000/api/auth/refresh-token`,
         refreshToken

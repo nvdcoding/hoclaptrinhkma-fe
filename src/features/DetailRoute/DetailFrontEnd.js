@@ -12,26 +12,19 @@ export default function DetailFrontEnd() {
         "Để học web Front-end chúng ta luôn bắt đầu với ngôn ngữ HTML và CSS, đây là 2 ngôn ngữ có mặt trong mọi website trên internet. Trong khóa học này F8 sẽ chia sẻ từ những kiến thức cơ bản nhất. Sau khóa học này bạn sẽ tự làm được 2 giao diện websites là The Band và Shopee.",
       course: [
         {
-          link: "https://res.cloudinary.com/learnit2022/image/upload/v1644415439/qixoiwzjup8jq4qdcmjm.jpg",
-          img: "https://res.cloudinary.com/learnit2022/image/upload/v1644415439/qixoiwzjup8jq4qdcmjm.jpg",
+          link: "http://learnit-kma.me/course/6229fe5d6b1c671d838f5c09",
+          img: "https://res.cloudinary.com/learnit2022/image/upload/v1646919253/pcmlxhkcapnsq0wdliz5.jpg",
           name: "HTML, CSS từ Zero đến Hero ",
           sub_name:
             "Trong khóa này chúng ta sẽ cùng nhau xây dựng giao diện 2 trang web là The Band & Shopee.",
         },
         {
-          link: "https://res.cloudinary.com/learnit2022/image/upload/v1644415744/b7qbpyswkuj42iswwltx.jpg",
-          img: "https://res.cloudinary.com/learnit2022/image/upload/v1644415744/b7qbpyswkuj42iswwltx.jpg",
+          link: "http://learnit-kma.me/course/6229fea76b1c671d838f5c0d",
+          img: "https://res.cloudinary.com/learnit2022/image/upload/v1646919325/dwvohrt0f5qga347rfc9.jpg",
           name: "Responsive Với Grid System",
           sub_name:
             "Trong khóa này chúng ta sẽ học về cách xây dựng giao diện web responsive với Grid System, tương tự Bootstrap 4.",
-        },
-        {
-          link: "http://localhost:3000/course/62013347454d18c74b612d5d",
-          img: "https://res.cloudinary.com/learnit2022/image/upload/v1644415533/kuizu1q4fzhwxjr1cnnh.jpg",
-          name: "HTML, CSS Tips & Tricks",
-          sub_name:
-            "Tutorials về HTML, CSS, UI, UX sẽ được tổng hợp tại khóa học này, các video có nội dung ngắn gọn, súc tích giúp học viên có thể ứng dụng ngay vào thực tế",
-        },
+        }
       ],
     },
     {
@@ -40,15 +33,15 @@ export default function DetailFrontEnd() {
         "Với HTML, CSS bạn mới chỉ xây dựng được các websites tĩnh, chỉ bao gồm phần giao diện và gần như chưa có xử lý tương tác gì. Để thêm nhiều chức năng phong phú và tăng tính tương tác cho website bạn cần học Javascript.",
       course: [
         {
-          link: "http://localhost:3000/course/620133cc1635993a4d62e20b",
-          img: "https://res.cloudinary.com/learnit2022/image/upload/v1644415623/rnsnozd6cw7rl8wwffhd.jpg",
+          link: "http://learnit-kma.me/course/6229fee56b1c671d838f5c11",
+          img: "https://res.cloudinary.com/learnit2022/image/upload/v1646919379/igo0c2gveb6qcdgbv5jv.jpg",
           name: "JavaScript Cơ Bản",
           sub_name:
             "Học Javascript cơ bản phù hợp cho người chưa từng học lập trình. Với hơn 100 bài học và có bài tập thực hành sau mỗi bài học.",
         },
         {
-          link: "http://localhost:3000/course/62013417d1cbcc188f8822f5",
-          img: "https://res.cloudinary.com/learnit2022/image/upload/v1644415683/ivjenrdh9h1n3pdlwrwc.jpg",
+          link: "http://learnit-kma.me/course/6229ff616b1c671d838f5c15",
+          img: "https://res.cloudinary.com/learnit2022/image/upload/v1646919518/jwzmmktj6lexczunipuu.jpg",
           name: "JavaScript nag cao",
           sub_name:
             "Hiểu sâu hơn về cách Javascript hoạt động, tìm hiểu về IIFE, closure, reference types, this keyword, bind, call, apply, prototype, ...",
@@ -61,8 +54,8 @@ export default function DetailFrontEnd() {
         "Một websites hay ứng dụng hiện đại rất phức tạp, chỉ sử dụng HTML, CSS, Javascript theo cách code thuần (tự code từ đầu tới cuối) sẽ rất khó khăn. Vì vậy các Libraries, Frameworks ra đời nhằm đơn giản hóa, tiết kiệm chi phí và thời gian để hoàn thành một sản phẩm website hoặc ứng dụng mobile.",
       course: [
         {
-          link: "http://localhost:3000/course/62013449d1cbcc188f8822fa",
-          img: "https://res.cloudinary.com/learnit2022/image/upload/v1644415914/hfs7wojbdnrbm514a49v.jpg",
+          link: "http://learnit-kma.me/course/6229ff956b1c671d838f5c19",
+          img: "https://res.cloudinary.com/learnit2022/image/upload/v1646919556/fu5fqoatlarmcunp2ji7.jpg",
           name: "Xây Dựng Website với ReactJS",
           sub_name:
             "Khóa học ReactJS từ cơ bản tới nâng cao, kết quả của khóa học này là bạn có thể làm hầu hết các dự án thường gặp với ReactJS. Cuối khóa học này bạn sẽ sở hữu một dự án giống Tiktok.com, bạn có thể tự tin đi xin việc khi nắm chắc các kiến thức được chia sẻ trong khóa học này.",

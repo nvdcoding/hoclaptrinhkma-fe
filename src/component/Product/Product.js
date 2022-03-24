@@ -6,11 +6,11 @@ import "../../pages/HomePage/Blog/Blog.scss";
 import "../../features/DetailBlog/DetailBlog.scss";
 import "../../pages/HomePage/Document/document.scss";
 const topic = [
-  { name: "Front-end / Mobile Apps" },
-  { name: "Back-end / DevOps" },
-  { name: "Front-end / Mobile Apps" },
-  { name: "UI / UX / Design" },
-  { name: "Others" },
+  { name: "Front-end / Mobile Apps", link: "Frontend" },
+  { name: "Back-end / DevOps", link: "Backend" },
+  { name: "FullStack", link: "FullStack" },
+  { name: "UI / UX / Design", link: "UIUX" },
+  { name: "Others", link: "Others" },
 ];
 export default function Product() {
   document.title = "Thành quả của học viên";
@@ -661,9 +661,9 @@ export default function Product() {
             <div className="Blog-topic">
               <h3>Các chủ đề được đề xuất</h3>
               <div className="Topic-list">
-                {topic.map((item) => (
+              {topic.map((item) => (
                   <div className="Topic-item">
-                    <Link to="#">{item.name}</Link>
+                    <Link to={`/topic/${item.link}`}>{item.name}</Link>
                   </div>
                 ))}
               </div>

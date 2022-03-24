@@ -23,7 +23,8 @@ function Account() {
         twitter: values.twitter,
       },
     });
-    await getProfile();
+    message.success("Cập nhật thông tin thành công");
+    window.location.reload();
   };
 
   async function getProfile() {
@@ -82,7 +83,7 @@ function Account() {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
           autoComplete="off"
-          form={form}
+          
         >
           <Form.Item>
             <div className="btn-active">
@@ -215,6 +216,7 @@ function Account() {
             <button onClick={() => setShow(!show)}>Thay đổi</button>
           </div>
           <Form
+         form={form}
             hidden={show}
             name="basic"
             initialValues={{ remember: true }}

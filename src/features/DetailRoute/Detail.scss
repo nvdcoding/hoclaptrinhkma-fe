@@ -33,6 +33,7 @@
             font-size: 18px;
           }
         }
+        
       }
       .Main-right {
         .Main-right-body {
@@ -77,6 +78,17 @@
     }
   }
 }
+.Detail-content{
+  .card-route{
+    img{
+      width: 250px;
+      height: 100%;
+      margin-left: 15px;
+    }
+  }
+}
+@media (max-width: 1147px) {.Detail-content .card-route img {
+  width: 185px;}}
 @media (min-width: 740px) and (max-width: 1023px) {
   .Detail-wrapper {
     .StudyRoute-wrapper section .Main-right {
@@ -101,4 +113,13 @@
   }
 }
 @media (min-width: 0px) and (max-width: 739px) {
+  .StudyRoute-wrapper section .Main-left .Main-left-body .card-route .card-body{
+    width: 95%;
+    margin: auto;
+  }.StudyRoute-wrapper section .Main-left .Main-left-body .card-route .card-body a button {
+    width: auto;
+    margin-bottom: 20px;
+}
+
+
 }

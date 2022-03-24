@@ -5,7 +5,8 @@ function StudyRoute_Item({ item }) {
   return (
     <>
       <div className="card-route">
-        <img alt="Khóa học" src={item.img} />
+        <div className="card-img"><img alt="Khóa học" src={item.img} /></div>
+        
         <div className="card-body">
           <Link to={`/studyRoute${item.link}`}>
             <span>{item.name}</span>

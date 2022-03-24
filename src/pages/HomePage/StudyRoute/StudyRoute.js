@@ -6,21 +6,21 @@ import StudyRouteItem from "./component/StudyRoute_Item";
 const StudyRoutes = [
   {
     link: "/nhap-mon",
-    img: "https://cdn.fullstack.edu.vn/f8-production/learning-paths/3/61a0439cc779b.png",
+    img: "https://files.fullstack.edu.vn/f8-prod/learning-paths/2/61a0439062b82.png",
     name: "Bắt đầu",
     sub_name:
       "Trước tiên, chúng ta sẽ tìm hiểu về phương pháp học lập trình, kỹ năng đặt mục tiêu và các khái niệm kỹ thuật như: domain, client, server.",
   },
   {
     link: "/front-end",
-    img: "https://cdn.fullstack.edu.vn/f8-production/learning-paths/2/61a0439062b82.png",
+    img: "https://files.fullstack.edu.vn/f8-prod/learning-paths/3/61a0439cc779b.png",
     name: "Front-end",
     sub_name:
       "Lập trình viên Front-end là người xây dựng ra giao diện websites. Trong phần này F8 sẽ chia sẻ cho bạn lộ trình để trở thành lập trình viên Front-end nhé.",
   },
   {
     link: "/back-end",
-    img: "https://cdn.fullstack.edu.vn/f8-production/learning-paths/3/61a0439cc779b.png",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSqdfAj0DDvsZPbLghS37lFxv06oauk1U-iQ&usqp=CAU",
     name: "Back-end",
     sub_name:
       "Trái với Front-end thì lập trình viên Back-end là người làm việc với dữ liệu, công việc thường nặng tính logic hơn. Chúng ta sẽ cùng tìm hiểu thêm về lộ trình học để trở thành lập trình viên Back-end nhé.",
